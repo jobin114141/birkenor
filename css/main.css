@@ -7703,7 +7703,7 @@ form textarea:required:valid {
   will-change: transform;
 }
 
-.no-touch .socials-cards__link:hover {
+/* .no-touch .socials-cards__link:hover {
   color: var(--t-opp-bright);
   background-color: var(--t-bright);
   -webkit-transition: color 0.3s 0s, background-color 0.3s 0.24s, -webkit-box-shadow 0.5s, -webkit-transform 0.3s ease-in-out;
@@ -7723,7 +7723,7 @@ form textarea:required:valid {
 .no-touch .socials-cards__link:hover em {
   width: 225%;
   height: 40.95rem;
-}
+} */
 
 @media only screen and (min-width: 1400px) {
   .socials-cards__link i {
