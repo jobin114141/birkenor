@@ -1,0 +1,182 @@
+/* Essentials Page Styles */
+.essentials-section {
+    padding: 8rem 0;
+    width: 100%;
+}
+
+.essentials-hero {
+    background-color: #f9f8f6;
+    padding: 12rem 0 8rem 0;
+    text-align: center;
+    min-height: auto;
+}
+
+.essentials-title {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.essentials-subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--t-medium);
+    margin-bottom: 4rem;
+}
+
+.essentials-intro p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    color: var(--t-medium);
+}
+
+.essentials-intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* Philosophy & Text Sections */
+.section-centered-text {
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.section-title-large {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    letter-spacing: -0.01em;
+}
+
+.text-block-large {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--t-muted);
+}
+
+.text-block-large p {
+    margin-bottom: 2rem;
+}
+
+/* Product Grid */
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .collection-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    /* Editorial portrait ratio */
+    cursor: pointer;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.2);
+    /* Subtle dark overlay for contrast text, or beige as requested */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+/* User requested: "very subtle beige or translucent black 20-30%" */
+.product-overlay.style-beige {
+    background-color: rgba(245, 240, 235, 0.85);
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-info {
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-info {
+    transform: translateY(0);
+}
+
+.product-name {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    color: var(--t-opp-bright);
+    /* Use opposite color based on overlay */
+}
+
+.product-overlay.style-beige .product-name {
+    color: var(--t-bright);
+}
+
+.product-price {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--t-medium);
+    /* Contrast? */
+}
+
+.product-overlay.style-beige .product-price {
+    color: var(--t-medium);
+}
+
+/* Closing Statement */
+.closing-statement {
+    padding: 10rem 0;
+    text-align: center;
+    background-color: var(--base);
+    /* Default bg */
+}
+
+.closing-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}

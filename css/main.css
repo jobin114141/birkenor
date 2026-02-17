@@ -7895,3 +7895,67 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Contact Data End */
 /* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Editorial Product Grid Start */
+/* ------------------------------------------------*/
+.editorial-section {
+  padding-bottom: 2rem;
+}
+
+.editorial-card {
+  position: relative;
+  transition: all var(--_animspeed-medium) ease;
+  height: 100%;
+}
+
+.editorial-card__image-wrapper {
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3/4; /* Consistent portrait aspect ratio */
+  background-color: var(--base-tint); /* Placeholder background */
+}
+
+.editorial-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.editorial-card:hover .editorial-card__image {
+  transform: scale(1.03);
+}
+
+.editorial-card__title {
+  font-family: var(--_font-default);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  font-size: 1.4rem;
+  color: var(--t-medium);
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.editorial-card__price {
+  font-family: var(--_font-default);
+  font-size: 1.3rem;
+  color: var(--t-muted);
+  margin-top: 0.5rem;
+}
+
+/* Add grid spacing override if needed beyond bootstrap g-5 */
+.row.g-5 {
+  --bs-gutter-x: 4rem;
+  --bs-gutter-y: 4rem;
+}
+
+@media (min-width: 992px) {
+  .row.g-5 {
+    --bs-gutter-x: 6rem;
+    --bs-gutter-y: 6rem;
+  }
+}
+/* ------------------------------------------------*/
+/* Editorial Product Grid End */
+/* ------------------------------------------------*/
