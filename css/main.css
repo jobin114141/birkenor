@@ -4660,6 +4660,20 @@ form textarea:required:valid {
   }
 }
 
+/* Header Color States - Added for Scroll Effect */
+.header--hero .menu__link {
+  color: #ffffff !important;
+}
+
+.header--hero .menu__link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.header--scrolled .menu__link {
+  color: #000000 !important;
+}
+
+
 .logo {
   display: -webkit-box;
   display: -moz-box;

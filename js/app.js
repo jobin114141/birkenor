@@ -97,28 +97,27 @@ function pageAppearance() {
 // --------------------------------------------- //
 
 window.addEventListener("DOMContentLoaded", () => {
-  const allowedPages = ["/index.html", "/ourProducts.html"]; // pages to enable effect
-  const currentPage = window.location.pathname;
+  // Check if we are on index.html, ourProducts.html, or the root path
+  // Using endsWith allows this to work with local file paths (e.g., /Users/.../index.html)
+  const isAllowed = window.location.pathname.endsWith("index.html") ||
+    window.location.pathname.endsWith("ourProducts.html") ||
+    window.location.pathname.endsWith("/");
 
   // Only run on allowed pages
-  if (!allowedPages.includes(currentPage)) return;
+  if (!isAllowed) return;
 
-
-
+  const header = document.querySelector("#header");
   const updateColor = () => {
-    const menuLinks = document.querySelectorAll(".menu__link");
     const scrollY = window.scrollY;
     const viewportHeight = window.innerHeight;
 
     // Change color if scrolled past the viewport height (hero section)
     if (scrollY < viewportHeight - 50) { // Slight buffer
-      menuLinks.forEach(link => {
-        link.style.color = "white";
-        // Also ensure hover/active states don't override immediately if possible, 
-        // but inline style is strong.
-      });
+      header.classList.add("header--hero");
+      header.classList.remove("header--scrolled");
     } else {
-      menuLinks.forEach(link => link.style.color = "black");
+      header.classList.add("header--scrolled");
+      header.classList.remove("header--hero");
     }
   };
 
