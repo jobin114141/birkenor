@@ -7928,6 +7928,8 @@ form textarea:required:valid {
   position: relative;
   aspect-ratio: 3/4; /* Consistent portrait aspect ratio */
   background-color: var(--base-tint); /* Placeholder background */
+  -moz-border-radius: var(--_radius);
+  border-radius: var(--_radius);
 }
 
 .editorial-card__image {
