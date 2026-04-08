@@ -91,6 +91,7 @@
     aspect-ratio: 3/4;
     /* Editorial portrait ratio */
     cursor: pointer;
+    border-radius: 12px;
 }
 
 .product-card img {
